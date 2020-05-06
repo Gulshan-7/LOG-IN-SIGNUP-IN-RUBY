@@ -1,10 +1,26 @@
+
+<!--<body style="background-color: #008000">   </body> -->
 <% if current_user %>
- Logged in as <%= current_user.email %>.
- <%= link_to 'Log Out', logout_path %>
+Logged in as <%= current_user.email %>
+<%= link_to 'Log Out', logout_path %>
+<% if current_user.email == "gg@gmail.com" %>
+ <h1> you are a logged in as admin bro add question </h1>
+ 
+ <a href="/home/tempi"> hi bebs </a>
+<%= link_to "add questions", :controller => :question_bank, :action => :index %>
+
+ <% else %>
+
+<h1> go to the test page bro what are you for here ?? </h1>
+
+<% end %>
+
 <% else %>
-<p> <%= link_to 'Sign Up', signup_path %> 
+<p> 
  <%= link_to 'Log In', login_path %> </p>
 <% end %>
 <p id='notice'><%= notice %></p>
 <h1>This is the Home page of test design</h1>
 <footer>	&copy; maropost</footer>
+
+

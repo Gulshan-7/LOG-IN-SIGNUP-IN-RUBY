@@ -1,0 +1,2 @@
+class Apptitude < ApplicationRecord
+end
